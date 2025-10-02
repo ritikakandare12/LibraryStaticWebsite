@@ -1,17 +1,15 @@
-// loadPartials.js
-document.addEventListener("DOMContentLoaded", () => {
-  const load = async (placeholderId, url) => {
-    try {
-      const res = await fetch(url);
-      if (!res.ok) throw new Error(`Failed to fetch ${url}: ${res.status}`);
-      const html = await res.text();
-      const el = document.getElementById(placeholderId);
-      if (el) el.innerHTML = html;
-    } catch (err) {
-      console.error(err);
-    }
-  };
+document.addEventListener('DOMContentLoaded', () => {
+  // Load Header
+  fetch('partials/header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+    });
 
-  load('header-placeholder', 'partials/header.html');
-  load('footer-placeholder', 'partials/footer.html');
+  // Load Footer
+  fetch('partials/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
 });
