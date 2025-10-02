@@ -26,6 +26,18 @@ document.addEventListener('DOMContentLoaded', () => {
           dueDate: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000).toLocaleDateString()
         });
         saveData();
+
+        // ✅ Update UI immediately
+        const status = card.querySelector('.book-status');
+        if (status) {
+          status.textContent = "Borrowed";
+          status.classList.remove("status-available");
+          status.classList.add("status-borrowed");
+        }
+
+        this.textContent = "Not Available";
+        this.disabled = true;
+
         alert(`You have successfully borrowed "${bookTitle}".`);
       } else {
         alert(`You already borrowed "${bookTitle}".`);
