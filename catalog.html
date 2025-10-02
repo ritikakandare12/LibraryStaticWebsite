@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Catalog - Library Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <div id="header-placeholder"></div>
+
+  <!-- Catalog -->
+  <div class="container">
+    <h1 class="section-title">Book Catalog</h1>
+
+    <div class="card">
+      <div class="form-group">
+        <!-- Added id="search-box" so JS can target it -->
+        <input type="text" id="search-box" placeholder="Search by title, author, or subject...">
+      </div>
+    </div>
+
+   <div class="book-grid">
+  <!-- Harry Potter Books -->
+  <div class="book-card">
+    <div class="book-img"><img src="images/philosophers stone.webp" alt="Harry Potter 1"></div>
+    <div class="book-content">
+      <h3 class="book-title">Harry Potter and the Sorcerer’s Stone</h3>
+      <p class="book-author">by J.K. Rowling</p>
+      <p class="book-subject">Fantasy</p>
+      <span class="book-status status-available">Available</span>
+      <div style="margin-top: 1rem;"><button class="btn">Borrow</button></div>
+    </div>
+  </div>
+
+  <div class="book-card">
+    <div class="book-img"><img src="images/ch sec.webp" alt="Harry Potter 2"></div>
+    <div class="book-content">
+      <h3 class="book-title">Harry Potter and the Chamber of Secrets</h3>
+      <p class="book-author">by J.K. Rowling</p>
+      <p class="book-subject">Fantasy</p>
+      <span class="book-status status-available">Available</span>
+      <div style="margin-top: 1rem;"><button class="btn">Borrow</button></div>
+    </div>
+  </div>
+
+  <div class="book-card">
+    <div class="book-img"><img src="images/azkaban.jpg" alt="Harry Potter 3"></div>
+    <div class="book-content">
+      <h3 class="book-title">Harry Potter and the Prisoner of Azkaban</h3>
+      <p class="book-author">by J.K. Rowling</p>
+      <p class="book-subject">Fantasy</p>
+      <span class="book-status status-borrowed">Borrowed</span>
+      <div style="margin-top: 1rem;"><button class="btn" disabled>Not Available</button></div>
+    </div>
+  </div>
+
+  <div class="book-card">
+    <div class="book-img"><img src="images/siddharta.webp" alt="Siddhartha"></div>
+    <div class="book-content">
+      <h3 class="book-title">Siddhartha</h3>
+      <p class="book-author">by Hermann Hesse</p>
+      <p class="book-subject">Philosophy</p>
+      <span class="book-status status-available">Available</span>
+      <div style="margin-top: 1rem;"><button class="btn">Borrow</button></div>
+    </div>
+  </div>
+
+  <div class="book-card">
+    <div class="book-img"><img src="images/monk.jpg" alt="Think Like A Monk"></div>
+    <div class="book-content">
+      <h3 class="book-title">Think Like A Monk</h3>
+      <p class="book-author">by Jay Shetty</p>
+      <p class="book-subject">Self-Help</p>
+      <span class="book-status status-available">Available</span>
+      <div style="margin-top: 1rem;"><button class="btn">Borrow</button></div>
+    </div>
+  </div>
+
+  <div class="book-card">
+    <div class="book-img"><img src="images/atomic habits.webp" alt="Atomic Habits"></div>
+    <div class="book-content">
+      <h3 class="book-title">Atomic Habits</h3>
+      <p class="book-author">by James Clear</p>
+      <p class="book-subject">Self-Help</p>
+      <span class="book-status status-available">Available</span>
+      <div style="margin-top: 1rem;"><button class="btn">Borrow</button></div>
+    </div>
+  </div>
+
+  <div class="book-card">
+    <div class="book-img"><img src="images/rich dad poor dad.jpg" alt="Rich Dad Poor Dad"></div>
+    <div class="book-content">
+      <h3 class="book-title">Rich Dad Poor Dad</h3>
+      <p class="book-author">by Robert T. Kiyosaki</p>
+      <p class="book-subject">Finance</p>
+      <span class="book-status status-available">Available</span>
+      <div style="margin-top: 1rem;"><button class="btn">Borrow</button></div>
+    </div>
+  </div>
+
+  <div class="book-card">
+    <div class="book-img"><img src="images/the mindset.jpg" alt="Mindset"></div>
+    <div class="book-content">
+      <h3 class="book-title">Mindset: The New Psychology of Success</h3>
+      <p class="book-author">by Carol S. Dweck</p>
+      <p class="book-subject">Psychology</p>
+      <span class="book-status status-available">Available</span>
+      <div style="margin-top: 1rem;"><button class="btn">Borrow</button></div>
+    </div>
+  </div>
+
+  <div class="book-card">
+    <div class="book-img"><img src="images/alchemist.webp" alt="The Alchemist"></div>
+    <div class="book-content">
+      <h3 class="book-title">The Alchemist</h3>
+      <p class="book-author">by Paulo Coelho</p>
+      <p class="book-subject">Fiction</p>
+      <span class="book-status status-borrowed">Borrowed</span>
+      <div style="margin-top: 1rem;"><button class="btn" disabled>Not Available</button></div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="loadPartials.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

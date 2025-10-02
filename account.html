@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account - Library Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <div id="header-placeholder"></div>
+
+  <!-- Account Info -->
+  <div class="container">
+    <h1 class="section-title">My Account</h1>
+
+    <div class="card">
+      <h2>Student Information</h2>
+      <p><strong>Name:</strong> Ritika Kandare</p>
+      <p><strong>Email:</strong> 2305041.stu@dmscollege.ac.in</p>
+      <p><strong>Membership:</strong> Active (Expires: 31/12/2025)</p>
+    </div>
+
+    <div class="card">
+      <h2>Currently Borrowed Books</h2>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Book Title</th>
+              <th>Author</th>
+              <th>Borrowed Date</th>
+              <th>Due Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="borrowed-books">
+            <!-- JS will insert borrowed books here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Borrowing History</h2>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Book Title</th>
+              <th>Author</th>
+              <th>Borrowed Date</th>
+              <th>Returned Date</th>
+            </tr>
+          </thead>
+          <tbody id="history-books">
+            <!-- JS can append returned books here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script src="loadPartials.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
