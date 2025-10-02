@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Library Management System</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <!-- Header -->
   <div id="header-placeholder"></div>
-
 
   <!-- Contact -->
   <div class="container">
@@ -20,16 +22,22 @@
       <p>Have questions or need assistance? Reach out to our team through any of the methods below:</p>
 
       <div class="book-grid">
+        <!-- Location -->
         <div class="book-card">
-          <div class="book-img">Location</div>
+          <div class="book-img contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
           <div class="book-content">
             <h3 class="book-title">Visit Us</h3>
             <p>Library Management System<br><br>Assagao Goa</p>
           </div>
         </div>
 
+        <!-- Phone -->
         <div class="book-card">
-          <div class="book-img">Phone</div>
+          <div class="book-img contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
           <div class="book-content">
             <h3 class="book-title">Call Us</h3>
             <p><strong>Main Line:</strong> 9876543210</p>
@@ -37,8 +45,11 @@
           </div>
         </div>
 
+        <!-- Email -->
         <div class="book-card">
-          <div class="book-img">Email</div>
+          <div class="book-img contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
           <div class="book-content">
             <h3 class="book-title">Email Us</h3>
             <p><strong>General:</strong> library@123.edu</p>
@@ -48,6 +59,7 @@
       </div>
     </div>
 
+    <!-- Contact Form -->
     <div class="card">
       <h2>Send Us a Message</h2>
       <form id="contact-form">
@@ -77,12 +89,9 @@
   </div>
 
   <!-- Footer -->
-<div id="footer-placeholder"></div>
-
+  <div id="footer-placeholder"></div>
 
   <script src="script.js"></script>
   <script src="loadPartials.js"></script>
-<script src="script.js"></script>
-
 </body>
 </html>

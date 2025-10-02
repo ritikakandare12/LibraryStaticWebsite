@@ -410,3 +410,14 @@ footer {
   transform: scale(1.1);
   filter: invert(20%) sepia(100%) saturate(300%) hue-rotate(190deg);
 }
+
+/* Contact Page Icons */
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;   /* medium size */
+  color: #2b3a67;    /* theme color */
+  margin-bottom: 15px;
+}
+
