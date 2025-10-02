@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Load borrowed & history from localStorage
+  //Load borrowed & history from localStorage
   let borrowedBooks = JSON.parse(localStorage.getItem('borrowedBooks')) || [];
   let historyBooks = JSON.parse(localStorage.getItem('historyBooks')) || [];
 
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('historyBooks', JSON.stringify(historyBooks));
   }
 
-  // --- Borrow Books (catalog.html) ---
+  //Borrow Books in catalog.html
   const borrowButtons = document.querySelectorAll('.book-card .btn:not([disabled])');
   borrowButtons.forEach(button => {
     button.addEventListener('click', function () {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const authorElement = card.querySelector('.book-author');
       const bookAuthor = authorElement ? authorElement.textContent.replace('by ', '') : "Unknown";
 
-      // Prevent duplicate borrowing
+      //Prevent duplicate borrowing
       if (!borrowedBooks.find(b => b.title === bookTitle)) {
         borrowedBooks.push({
           title: bookTitle,
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         saveData();
 
-        // ✅ Update UI immediately
+        //Update UI immediately
         const status = card.querySelector('.book-status');
         if (status) {
           status.textContent = "Borrowed";
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- Display Borrowed Books (account.html) ---
+  //Borrowed Books in account.html 
   const borrowedTable = document.querySelector('#borrowed-books');
   if (borrowedTable) {
     borrowedBooks.forEach(book => {
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
       borrowedTable.appendChild(row);
 
-      // Handle Return
+      //Return book
       row.querySelector('.btn-danger').addEventListener('click', () => {
         borrowedBooks = borrowedBooks.filter(b => b.title !== book.title);
         historyBooks.push({
@@ -69,12 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
         saveData();
         row.remove();
         alert(`You have returned "${book.title}".`);
-        location.reload(); // refresh to update history
+        location.reload(); 
       });
     });
   }
 
-  // --- Display Borrowing History (account.html) ---
+  //Borrowing History in account.html
   const historyTable = document.querySelector('#history-books');
   if (historyTable) {
     historyBooks.forEach(book => {
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Contact Form (contact.html) ---
+  //Contact Form 
   const contactForm = document.querySelector('#contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Book Search (catalog.html) ---
+  //Book Search in catalog.html
   const searchBox = document.querySelector('#search-box');
   if (searchBox) {
     searchBox.addEventListener('input', function () {

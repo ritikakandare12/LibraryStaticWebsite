@@ -390,3 +390,23 @@ footer {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
+/* Service icons inside homepage cards */
+.service-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.service-icon img {
+  width: 80px;   
+  height: 80px;
+  object-fit: contain;
+  filter: invert(25%) sepia(80%) saturate(200%) hue-rotate(200deg);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.service-icon img:hover {
+  transform: scale(1.1);
+  filter: invert(20%) sepia(100%) saturate(300%) hue-rotate(190deg);
+}
